@@ -2,21 +2,24 @@ $( document ).ready(function() {
 
 
 window.onload = function (){
-	$('#jarBinks').click(game.test);
-};
-
-$('img').hover(
-	function(){
+	$('.charCard').click(game.choose);
+	$('.charCard').hover(function(){
 		$(this).animate({borderWidth: 5}, 'fast');
-	},
-	function(){
+	}, function(){
 		$(this).animate({borderWidth: 0}, 'fast');
 	}
 );
+};
+
+
+var binks = {
+	health: 75,
+	attack: 15
+};
+
 
 var game = {
-	test:function() {
-		alert("You have chosen Jar Jar Binks!");
+	choose:function() {
 	}
 };
 

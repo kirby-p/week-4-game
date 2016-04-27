@@ -10,23 +10,45 @@
 	<header></header>
 		<h1 class="titleHeader">{=ST&ar wa^%R$S+]</h1>
 		<h1 class="titleHeader">rpg</h1>
+	<div class="container">
 	<div id="content">
-		<h2>Choose Your Character</h2>
 		<div id="charDisplay">
-			<img id="binks" src="http://placehold.it/100x150">
-			<img id="grievous" src="http://placehold.it/100x150">
-			<img id="vader" src="http://placehold.it/100x150">
-			<img id="rey" src="http://placehold.it/100x150">
+			<h2>Choose Your Character</h2>
+			<div class="charCard">
+				<p>Jar Jar Binks</p>
+				<img id="binks" src="http://placehold.it/100x150">
+			</div>
+			<div class="charCard">
+				<p>General Grievous</p>
+				<img id="grievous" src="http://placehold.it/100x150">
+			</div>
+			<div class="charCard">
+				<p>Darth Vader</p>
+				<img id="vader" src="http://placehold.it/100x150">
+			</div>
+			<div class="charCard">
+				<p>Rey</p>
+				<img id="rey" src="http://placehold.it/100x150">
+			</div>
 		</div>
-		<h2>Enemies Available to Attack</h2>
-		<div id="enemyDisplay"></div>
-		<h2>Defender</h2>
-		<div id="currentEnemy"></div>
-		<h2>Fight</h2>
-		<div id="battleZone"></div>
+		<hr>
+		<div id="enemyDisplay">
+			<h2>Enemies Available to Attack</h2>
+			<div id="chooseEnemy"></div>		
+		</div>
+		<hr>
+		<div id="defender">
+			<h2>Defender</h2>
+			<div id="currentEnemy"></div>
+		</div>
 	</div>
-
-
+	<div id="battleZone">
+		<div id="fight">
+			<h2>Fight</h2>
+			<div id="outcome"></div>		
+		</div>
+	</div>
+	</div>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

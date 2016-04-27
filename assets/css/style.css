@@ -16,28 +16,46 @@ h1.titleHeader {
 	font-size: 75px;
 }
 h2 {
+	box-sizing: border-box;
+	background-color: black;
 	font-size: 30px;
+	color: yellow;
 }
-img {
+hr {
+	clear: both;
+}
+p {
+	color: white;
+}
+.charCard {
+	float: left;
 	box-sizing: border-box;
 	border-width: 0px;
 	border-style: solid;
 	color: aqua;
-	margin: 15px;
+	padding: 15px;
+	text-align: center;
 }
-#content {
-	overflow: auto;
-	position: relative;
+.container{
 	box-sizing: border-box;
-/*	border-width: 5px;
-	border-style: solid;*/
-	color: yellow;
-	width: 80%;
+	overflow: auto;
 	margin: auto;
-	top: -130px;
-	align: center;
-	
+	width: 90%;
+	margin-top: -140px;
 }
+#content{
+	float: left;
+	width: 60%;
+	box-sizing: border-box;
+	border-style: double;
+	border-color: white;
+	border-right-width: 10px;
+}
+#battleZone {
+	float: left;
+	width: 40%;
+}
+
 body { 
 	background-image: url("../images/starwarsBackground.jpg"); 
 	background-color: black;
