@@ -6,13 +6,30 @@ header {
 	height: 200px;
 	background-color: black;
 	opacity: 0.5;
-
 }
 h1.titleHeader {
 	position: relative;
-	bottom: 175px;
-	z-index: 2;
-
+	top: -175px;
+	font-family: starwarsfont;
+	text-align: center;
+	color: yellow;
+	font-size: 75px;
+}
+h2 {
+	font-size: 30px;
+}
+#content {
+	overflow: auto;
+	position: relative;
+	box-sizing: border-box;
+/*	border-width: 5px;
+	border-style: solid;*/
+	color: yellow;
+	width: 80%;
+	margin: auto;
+	top: -130px;
+	align: center;
+	
 }
 body { 
 	background-image: url("../images/starwarsBackground.jpg"); 
@@ -21,11 +38,4 @@ body {
 	background-attachment: fixed;
 	background-size: 110%;
 	background-position: -50px 0px;
-}
-
-h1 {
-	font-family: starwarsfont;
-	text-align: center;
-	color: yellow;
-	font-size: 75px;
 }

@@ -3,17 +3,30 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+
 	<title>Star Wars RPG</title>
 </head>
 <body>
 	<header></header>
-	<h1 class="titleHeader">{=ST&ar wa^%R$S+]<br>rpg</h1>
+		<h1 class="titleHeader">{=ST&ar wa^%R$S+]</h1>
+		<h1 class="titleHeader">rpg</h1>
+	<div id="content">
+		<h2>Choose Your Character</h2>
+		<div id="charDisplay">
+			<img id="jarBinks" src="http://placehold.it/100x150">
+		</div>
+		<h2>Enemies Available to Attack</h2>
+		<div id="enemyDisplay"></div>
+		<h2>Defender</h2>
+		<div id="currentEnemy"></div>
+		<h2>Fight</h2>
+		<div id="battleZone"></div>
+	</div>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script type="text/javascript">
 
 
 
-</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
 </body>
 </html>
