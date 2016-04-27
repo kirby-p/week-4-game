@@ -18,6 +18,13 @@ h1.titleHeader {
 h2 {
 	font-size: 30px;
 }
+img {
+	box-sizing: border-box;
+	border-width: 0px;
+	border-style: solid;
+	color: aqua;
+	margin: 15px;
+}
 #content {
 	overflow: auto;
 	position: relative;
