@@ -12,30 +12,108 @@ $('#binks').on('click', function(){
 	$('#chooseTitle').replaceWith('<h2>Your Character</h2>', $('#binks'));
 	$('#binks').removeClass('charCard').addClass('playerSelection');
 	$('#chooseEnemy').replaceWith($('#grievous, #vader, #rey'));
-	$('#grievous, #vader, #rey').removeClass('charCard').addClass('enemiesToChoose');				
+	$('#grievous, #vader, #rey').removeClass('charCard').addClass('enemiesToChoose');
+	$('#binks').attr('id', 'binksPlayer');
+	$('#grievous').attr('id', 'grievousEnemy');
+	$('#vader').attr('id', 'vaderEnemy');
+	$('#rey').attr('id', 'reyEnemy');
+	chooseEnemy(this.id);				
 });
 
 $('#grievous').on('click', function(){
 	$('#chooseTitle').replaceWith('<h2>Your Character</h2>', $('#grievous'));
 	$('#grievous').removeClass('charCard').addClass('playerSelection');
 	$('#chooseEnemy').replaceWith($('#binks, #vader, #rey'));
-	$('#binks, #vader, #rey').toggleClass('enemiesToChoose');
+	$('#binks, #vader, #rey').removeClass('charCard').addClass('enemiesToChoose');
+	$('#binks').attr('id', 'binksEnemy');
+	$('#grievous').attr('id', 'grievousPlayer');
+	$('#vader').attr('id', 'vaderEnemy');
+	$('#rey').attr('id', 'reyEnemy');
+	chooseEnemy(this.id);				
 });
 
 $('#vader').on('click', function(){
 	$('#chooseTitle').replaceWith('<h2>Your Character</h2>', $('#vader'));
 	$('#vader').removeClass('charCard').addClass('playerSelection');
 	$('#chooseEnemy').replaceWith($('#binks, #grievous, #rey'));
-	$('#binks, #grievous, #rey').toggleClass('enemiesToChoose');
+	$('#binks, #grievous, #rey').removeClass('charCard').addClass('enemiesToChoose');
+	$('#binks').attr('id', 'binksEnemy');
+	$('#grievous').attr('id', 'grievousEnemy');
+	$('#vader').attr('id', 'vaderPlayer');
+	$('#rey').attr('id', 'reyEnemy');
+	chooseEnemy(this.id);				
 });
 
 $('#rey').on('click', function(){
 	$('#chooseTitle').replaceWith('<h2>Your Character</h2>', $('#rey'));
 	$('#rey').removeClass('charCard').addClass('playerSelection');
 	$('#chooseEnemy').replaceWith($('#binks, #grievous, #vader'));
-	$('#binks, #grievous, #vader').toggleClass('enemiesToChoose');
+	$('#binks, #grievous, #vader').removeClass('charCard').addClass('enemiesToChoose');
+	$('#binks').attr('id', 'binksEnemy');
+	$('#grievous').attr('id', 'grievousEnemy');
+	$('#vader').attr('id', 'vaderEnemy');
+	$('#rey').attr('id', 'reyPlayer');	
+	chooseEnemy(this.id);				
 });
 
+function chooseEnemy(result) {
+	if(result == 'binksPlayer'){
+		$('#grievousEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#grievousEnemy'));
+			$('#grievousEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});
+		$('#vaderEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#vaderEnemy'));
+			$('#vaderEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});
+		$('#reyEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#reyEnemy'));
+			$('#reyEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+	}
+	else if(result == 'grievousPlayer'){
+		$('#binksEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#binksEnemy'));
+			$('#binksEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+		$('#vaderEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#vaderEnemy'));
+			$('#vaderEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});
+		$('#reyEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#reyEnemy'));
+			$('#reyEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+	}
+	else if(result == 'vaderPlayer'){
+		$('#binksEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#binksEnemy'));
+			$('#binksEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+		$('#grievousEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#grievousEnemy'));
+			$('#grievousEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});
+		$('#reyEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#reyEnemy'));
+			$('#reyEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+	}
+	else if(result == 'reyPlayer'){
+		$('#binksEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#binksEnemy'));
+			$('#binksEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+		$('#grievousEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#grievousEnemy'));
+			$('#grievousEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});
+		$('#vaderEnemy').on('click', function(){
+			$('#currentEnemy').replaceWith($('#vaderEnemy'));
+			$('#vaderEnemy').removeClass('enemiesToChoose').addClass('enemySelection');
+		});		
+	}
+}
 // var game = {
 // 	choosePlayer:function() {
 // 		var playerID = this.id;
@@ -80,17 +158,13 @@ $('#rey').on('click', function(){
 // 		var enemyID = this.id;
 // 		$('enemyID').removeClass('enemiesToChoose');
 // 		// if(enemyID == 'binks'){
-// 		// 	console.log('meesa jar jar binks');
 
 // 		// }
 // 		// else if(enemyID == 'grievous'){
-// 		// 	console.log('i\'m grievous, bitch');
 // 		// }
 // 		// else if(enemyID == 'vader'){
-// 		// 	console.log('i am your father');
 // 		// }
 // 		// else if(enemyID == 'rey'){
-// 		// 	console.log('i will fuck you up');
 // 		// }
 // 	}
 
