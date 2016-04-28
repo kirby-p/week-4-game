@@ -25,19 +25,23 @@ var game = {
 		var playerID = this.id;
 		if(playerID == 'binks'){
 			$('#chooseTitle').replaceWith($('#binks'));
-			$('#chooseEnemy').replaceWith($('#grievous'), $('#vader'), $('#rey'));
+			$('#chooseEnemy').replaceWith($('#grievous, #vader, #rey'));
+			$('#grievous, #vader, #rey').toggleClass('enemiesToChoose');
 		}
 		else if(playerID == 'grievous'){
 			$('#chooseTitle').replaceWith($('#grievous'));
-			$('#chooseEnemy').replaceWith($('#binks'), $('#vader'), $('#rey'));		
+			$('#chooseEnemy').replaceWith($('#binks, #vader, #rey'));
+			$('#binks, #vader, #rey').toggleClass('enemiesToChoose');
 		}
 		else if(playerID == 'vader'){
 			$('#chooseTitle').replaceWith($('#vader'));
-			$('#chooseEnemy').replaceWith($('#binks'), $('#grievous'), $('#rey'));		
+			$('#chooseEnemy').replaceWith($('#binks, #grievous, #rey'));
+			$('#binks, #grievous, #rey').toggleClass('enemiesToChoose');
 		}
 		else if(playerID == 'rey'){
 			$('#chooseTitle').replaceWith($('#rey'));
-			$('#chooseEnemy').replaceWith($('#binks'), $('#grievous'), $('#vader'));		
+			$('#chooseEnemy').replaceWith($('#binks, #grievous, #vader'));
+			$('#binks, #grievous, #vader').toggleClass('enemiesToChoose');
 		}
 
 	}
