@@ -3,17 +3,17 @@
 	src: url(../fonts/Starjhol.ttf);
 }
 header {
-	height: 200px;
+	height: 60px;
 	background-color: black;
 	opacity: 0.5;
 }
 h1.titleHeader {
 	position: relative;
-	top: -175px;
+	top: -60px;
 	font-family: starwarsfont;
 	text-align: center;
 	color: yellow;
-	font-size: 75px;
+	font-size: 55px;
 }
 h2 {
 	box-sizing: border-box;
@@ -34,7 +34,7 @@ p {
 	border-style: solid;
 	color: aqua;
 	background-color: white;
-	padding: 15px;
+	padding: 5px 15px 5px 15px;
 	margin: 5px 5px 5px 5px;
 	text-align: center;
 }
@@ -43,7 +43,7 @@ p {
 	overflow: auto;
 	margin: auto;
 	width: 90%;
-	margin-top: -140px;
+	margin-top: -30px;
 }
 #content{
 	float: left;
