@@ -50,6 +50,17 @@ p {
 	margin: 5px 5px 5px 5px;
 	text-align: center;
 }
+.playerSelection {
+	float: left;
+	box-sizing: border-box;
+	border-width: 5px;
+	border-style: solid;
+	color: aqua;
+	background-color: aqua;
+	padding: 5px 15px 5px 15px;
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+}
 .container{
 	box-sizing: border-box;
 	overflow: auto;
